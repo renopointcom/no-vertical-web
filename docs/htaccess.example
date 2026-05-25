@@ -1,0 +1,25 @@
+# Configuration recommandée pour héberger nvw.js sur ton propre domaine
+# À placer à la racine du dossier qui sert le fichier.
+
+<IfModule mod_headers.c>
+    # CORS : permet l'inclusion depuis n'importe quel domaine
+    Header set Access-Control-Allow-Origin "*"
+
+    # Cache 1 jour
+    <FilesMatch "\.(js|css)$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+
+    # Sécurité de base
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<FilesMatch "\.js$">
+    AddType "application/javascript; charset=UTF-8" .js
+</FilesMatch>
+
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

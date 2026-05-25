@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dépendances (au cas où)
+node_modules/
+
+# Fichiers de build temporaires
+dist/
+build/
+*.min.js.map
+
+# Sensibles
+.env
+.env.local
