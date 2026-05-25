@@ -44,7 +44,7 @@ Pour un usage en production, utilise l'URL **jsDelivr versionnée** (immutable) 
 ```html
 <script
   src="https://cdn.jsdelivr.net/gh/renopointcom/no-vertical-web@v1.0.0/nvw.js"
-  integrity="sha384-[À_CALCULER]"
+  integrity="sha384-dryhVI3K834rbDLFKDvxMY0YxA5Gawmvuk5tRyX9jRghcq6nphsmOn3kFPQBO+gO"
   crossorigin="anonymous"></script>
 ```
 
